@@ -2,7 +2,7 @@ const capitalize = require("./capitalize");
 const reverseString = require("./reverseString");
 const calculator = require("./calculator");
 const caesarCipher = require("./caesarCipher");
-
+const analyzeArray = require("./analyzeArray");
 test("capitalize apple", () => {
   expect(capitalize("apple")).toBe("Apple");
 });
@@ -45,4 +45,13 @@ test("caesarCipher test lettercase", () => {
 
 test("caesarCipher test punctuation", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
+
+test("analyzeArray test Object", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });
